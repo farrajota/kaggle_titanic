@@ -1,6 +1,6 @@
-# Titanic: Machine Learning from Disaster -  Kaggle competition
+# Titanic: Machine Learning from Disaster challenge
 
-My attempt at the [Titanic: Machine Learning from Disaster](https://www.kaggle.com/c/titanic).
+My attempt at the [Titanic: Machine Learning from Disaster](https://www.kaggle.com/c/titanic) Kaggle competition.
 
 ## WARNING
 

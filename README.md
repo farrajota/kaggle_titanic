@@ -52,7 +52,7 @@ To run the notebooks using docker, you can:
 
     # or
 
-     $ docker image build -t jupyter_titanic .
+    $ docker image build -t jupyter_titanic .
     $ docker container run --rm -p 8080:8080 --name jupyter_notebook jupyter_titanic
     ```
 

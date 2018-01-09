@@ -8,7 +8,7 @@ Work in progress...
 
 ## Requirements
 
-- Python 3.x
+- Python3 (3.6 recommended)
 - jupyter
 - [scipy stack](https://www.scipy.org/stackspec.html) (pandas, scipy, scikit-learn, etc.)
 - docker (optional, recommended)

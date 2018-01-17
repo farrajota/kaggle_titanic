@@ -6,38 +6,24 @@ run:
 	docker image build -t jupyter_titanic . && \
     docker run --rm -p 8080:8080 --name jupyter_notebook jupyter_titanic
 
+
 ##################
 # Docker-compose
 ##################
 
-DOCKERFILE=docker-compose.yml
-DOCKERFILE_DEV=docker-compose.dev.yml
-
 build:
-	docker-compose -f $(DOCKERFILE) build
+	docker-compose build
 
 up:
-	docker-compose -f $(DOCKERFILE) up -d
+	docker-compose up -d
+	make logs
 
 down:
-	docker-compose -f $(DOCKERFILE) down
+	docker-compose down
 
 logs:
-	docker-compose -f $(DOCKERFILE) logs
+	docker-compose logs   # shows the login url with a token
 
 reload:
 	make down \
  		 up
-
-dev-up:
-	docker-compose -f $(DOCKERFILE_DEV) up -d
-
-dev-down:
-	docker-compose -f $(DOCKERFILE_DEV) down
-
-dev-logs:
-	docker-compose -f $(DOCKERFILE_DEV) logs
-
-dev-reload:
-	make dev-down \
- 		 dev-up

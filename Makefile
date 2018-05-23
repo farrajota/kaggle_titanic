@@ -15,6 +15,10 @@ build:
 	docker-compose build
 
 up:
+	docker-compose up
+	make logs
+
+up-d:
 	docker-compose up -d
 	make logs
 

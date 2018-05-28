@@ -68,6 +68,12 @@ To run the notebooks using docker, you can:
     $ docker-compose logs  # shows the login url + token
     ```
 
+## Setting up the data
+
+To run the cells in the notebooks, you must first download the data for the Titanic challenge. You can get it from [Kaggle](https://www.kaggle.com/c/titanic/data) directly and you should put the `train.csv` and `test.csv` files inside the `notebooks/data/` directory.
+
+> Note: The data needed to run the notebooks is not provided by this repo.
+
 ## License
 
 [MIT License](LICENSE)

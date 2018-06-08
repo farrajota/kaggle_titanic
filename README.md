@@ -1,10 +1,11 @@
 # Titanic: Machine Learning from Disaster challenge
 
-My attempt at the [Titanic: Machine Learning from Disaster](https://www.kaggle.com/c/titanic) Kaggle competition. This repo contains the code to predict which passengers survived the tragedy.
+My attempt at the [Titanic: Machine Learning from Disaster](https://www.kaggle.com/c/titanic) Kaggle competition. This repo contains the code to predict which passengers survived the Titanic shipwreck. The code is available via jupyter notebooks and its divided into main notebooks:
 
-## WARNING
+- [Data Analysis and Visualizations](notebooks/Data Analysis and Visualizations.ipynb) notebook with all the data analysis and data visualization code
+- [Machine Learning with Scikit-learn](notebooks/Machine Learning with Scikit-learn.ipynb) notebook for building up models for predicting the survival label of the passengers for submission to Kaggle 
 
-Work in progress...
+> Note: The Machine learning notebook requires that the data visualizations notebook has been run so that the processed data is available for use by this notebook.
 
 ## Requirements
 

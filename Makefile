@@ -2,32 +2,12 @@
 # Docker
 ##########
 
-run:
-	docker image build -t jupyter_titanic . && \
-    docker run --rm -p 8888:8888 --name jupyter_notebook jupyter_titanic
-
-
-##################
-# Docker-compose
-##################
 
 build:
-	docker-compose build
+	docker image build -t jupyter_spark_custom .
 
-up:
-	docker-compose up
-	make logs
+run:
+	docker run --rm -p 8888:8888 -v $(PWD)/notebooks:/home/jovyan/work --name jupyter_kaggle_titanic jupyter_spark_custom
 
-up-d:
-	docker-compose up -d
-	make logs
-
-down:
-	docker-compose down
-
-logs:
-	docker-compose logs   # shows the login url with a token
-
-reload:
-	make down \
- 		 up
+run-jupyterlab:
+	docker run --rm -p 8888:8888 -v $(PWD)/notebooks:/home/jovyan/work --name jupyter_kaggle_titanic jupyter_spark_custom start.sh jupyter lab

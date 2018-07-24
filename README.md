@@ -46,29 +46,32 @@ $ jupyter notebook
 
 ### Run a self-contained docker image
 
-To run the notebooks using docker, you can:
+To run the notebooks using docker, you first need to build the container's docker image. To do so, you just need to do the following:
 
-- i) Run the container:
+- i) Build the container using a Makefile macro:
+
+    ```bash
+    $ make build
+    ```
+
+- ii) Run the container using a command:
+
+    ```bash
+    $ docker image build -t jupyter_spark_custom .
+    ```
+
+Then, to start the container you can:
+
+- i) Run the container using a Makefile macro:
 
     ```bash
     $ make run
-
-    # or
-
-    $ docker image build -t jupyter_titanic .
-    $ docker container run --rm -p 8080:8080 --name jupyter_notebook jupyter_titanic
     ```
 
-- ii) Run the container using `docker-compose`:
+- ii) Run the container using a command:
 
     ```bash
-    $ make up
-    $ make logs  # shows the login url + token
-
-    # or
-
-    $ docker-compose up -d
-    $ docker-compose logs  # shows the login url + token
+    $ docker run --rm -p 8888:8888 -v "$PWD"/notebooks:/home/jovyan/work --name jupyter_kaggle_titanic jupyter_spark_custom
     ```
 
 ## Setting up the data
